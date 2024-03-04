@@ -13,3 +13,26 @@
 		max-width: 550px;
 	}
 }
+
+/* Стили для маленьких экранов (мобильных устройств) */
+@media only screen and (max-width: 767px) {
+  .accordion {
+    border-radius: 0;
+    margin-bottom: 10px; /* добавляем отступ между аккордионами */
+  }
+
+  .accordion-header {
+    padding: 12px; /* увеличиваем отступы для удобства нажатия */
+    font-size: 18px; /* увеличиваем размер шрифта заголовка */
+  }
+
+  .accordion-body {
+    padding: 12px; /* увеличиваем отступы внутри аккордиона */
+  }
+
+  .accordion-header span {
+    white-space: normal; /* позволяем тексту переноситься */
+    overflow: visible; /* отображаем весь текст без обрезки */
+    text-overflow: initial; /* отключаем обрезку текста с многоточием */
+  }
+}
