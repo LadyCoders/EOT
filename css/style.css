@@ -232,3 +232,10 @@ section {
   font-weight: 400;
   padding:0 40px;
 }
+
+svg{
+  width: 30px;
+  height: 30px;
+  background: #b4ec6b;
+  border-radius: 10px;
+}
