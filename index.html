@@ -1,12 +1,1413 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--metatextblock-->
+    <title>SharingMap</title>
+    <meta name="description"
+        content="Мобильное приложение, чтобы отдавать ненужные вещи в дар и находить нужные вещи бесплатно." />
+    <meta property="og:url" content="http://sharingmap.ru" />
+    <meta property="og:title" content="SharingMap" />
+    <meta property="og:description"
+        content="Мобильное приложение, чтобы отдавать ненужные вещи в дар и находить нужные вещи бесплатно." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://static.tildacdn.com/tild3530-3438-4835-b938-383633383137/___23.png" />
+    <link rel="canonical" href="http://sharingmap.ru"><!--/metatextblock-->
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://ws.tildacdn.com">
+    <link rel="dns-prefetch" href="https://static.tildacdn.com">
+    <link rel="dns-prefetch" href="https://fonts.tildacdn.com">
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild6335-6539-4237-a331-613735666339/favicon.ico"
+        type="image/x-icon" /><!-- Assets -->
+    <script src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js" charset="utf-8" async></script>
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-grid-3.0.min.css" type="text/css" media="all"
+        onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="https://ws.tildacdn.com/project1948920/tilda-blocks-page16444360.min.css?t=1669645328"
+        type="text/css" media="all" onerror="this.loaderr='y';" />
+    <link rel="stylesheet" href="https://static.tildacdn.com/css/tilda-animation-1.0.min.css" type="text/css"
+        media="all" onerror="this.loaderr='y';" />
+    <script type="text/javascript">TildaFonts = ["427", "429", "433", "435"];</script>
+    <script type="text/javascript" src="https://static.tildacdn.com/js/tilda-fonts.min.js" charset="utf-8"
+        onerror="this.loaderr='y';"></script>
+    <script
+        type="text/javascript">(function (d) {
+                if (!d.visibilityState) {
+                    var s = d.createElement('script');
+                    s.src = 'https://static.tildacdn.com/js/tilda-polyfill-1.0.min.js';
+                    d.getElementsByTagName('head')[0].appendChild(s);
+                }
+            })(document);
+            function t_onReady(func) {
+                if (document.readyState != 'loading') {
+                    func();
+                } else {
+                    document.addEventListener('DOMContentLoaded', func);
+                }
+            }
+            function t_onFuncLoad(funcName, okFunc, time) {
+                if (typeof window[funcName] === 'function') {
+                    okFunc();
+                } else {
+                    setTimeout(function () {
+                        t_onFuncLoad(funcName, okFunc, time);
+                    }, (time || 100));
+                }
+            } function t_throttle(fn, threshhold, scope) { return function () { fn.apply(scope || this, arguments); }; }</script>
+    <script src="https://static.tildacdn.com/js/jquery-1.10.2.min.js" charset="utf-8"
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-scripts-3.0.min.js" charset="utf-8" defer
+        onerror="this.loaderr='y';"></script>
+    <script src="https://ws.tildacdn.com/project1948920/tilda-blocks-page16444360.min.js?t=1669645328" charset="utf-8"
+        async onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/lazyload-1.3.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-animation-1.0.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-menu-1.0.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-zero-1.1.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-events-1.0.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script src="https://static.tildacdn.com/js/tilda-animation-sbs-1.0.min.js" charset="utf-8" async
+        onerror="this.loaderr='y';"></script>
+    <script type="text/javascript">window.dataLayer = window.dataLayer || [];</script>
+    <script type="text/javascript">(function () {
+            if ((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent)) === false && typeof (sessionStorage) != 'undefined' && sessionStorage.getItem('visited') !== 'y' && document.visibilityState) {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+                function t_setvisRecs() {
+                    var alr = document.querySelectorAll('.t-records');
+                    Array.prototype.forEach.call(alr, function (el) {
+                        el.classList.add("t-records_animated");
+                    });
+                    setTimeout(function () {
+                        Array.prototype.forEach.call(alr, function (el) {
+                            el.classList.add("t-records_visible");
+                        });
+                        sessionStorage.setItem("visited", "y");
+                    }, 400);
+                }
+                document.addEventListener('DOMContentLoaded', t_setvisRecs);
+            }
+        })();</script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="t-body" style="margin:0;"><!--allrecords-->
+    <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="1948920"
+        data-tilda-page-id="16444360" data-tilda-formskey="4746e13d7e4edaa4ecb9f43dd2a5c230" data-tilda-lazy="yes">
+        <div id="rec268055891" class="r t-rec t-screenmin-980px" style=" " data-animationappear="off"
+            data-record-type="456" data-screen-min="980px"><!-- T456 -->
+            <div id="nav268055891marker"></div>
+            <div id="nav268055891" class="t456 t456__positionfixed " style="background-color: rgba(54,106,83,0.0); "
+                data-bgcolor-hex="#366a53" data-bgcolor-rgba="rgba(54,106,83,0.0)" data-navmarker="nav268055891marker"
+                data-appearoffset="" data-bgopacity-two="50" data-menushadow="" data-bgopacity="0.0"
+                data-bgcolor-rgba-afterscroll="rgba(54,106,83,0.50)" data-menu-items-align="" data-menu="yes">
+                <div class="t456__maincontainer " style="">
+                    <div class="t456__leftwrapper" style="min-width:50px;width:50px;">
+                        <div class="t456__logowrapper" style="display: block;"><a href="http://sharingmap.ru/"
+                                style="color:#ffffff;"><img class="t456__imglogo t456__imglogomobile"
+                                    src="https://static.tildacdn.com/tild3362-3237-4062-a265-373461363264/Union_5.svg"
+                                    imgfield="img" style="max-width: 50px; width: 50px;" alt="Company"></a></div>
+                    </div>
+                    <nav class="t456__rightwrapper t456__menualign_center" aria-label="Основные разделы на странице"
+                        style="">
+                        <ul class="t456__list" role="menubar" aria-label="Основные разделы на странице">
+                            <li class="t456__list_item" role="none" style="padding:0 15px;"><a class="t-menu__link-item"
+                                    href="#how" role="menuitem" tabindex="0" data-menu-submenu-hook=""
+                                    data-menu-item-number="2" style="color:#ffffff;text-transform:uppercase;">Как
+                                    пользоваться?</a></li>
+                            <li class="t456__list_item" role="none" style="padding:0 15px;"><a class="t-menu__link-item"
+                                    href="#we" role="menuitem" tabindex="0" data-menu-submenu-hook=""
+                                    data-menu-item-number="4" style="color:#ffffff;text-transform:uppercase;">Кто
+                                    мы?</a></li>
+                            <li class="t456__list_item" role="none" style="padding:0 0 0 15px;"><a
+                                    class="t-menu__link-item" href="#contacts" role="menuitem" tabindex="0"
+                                    data-menu-submenu-hook="" data-menu-item-number="6"
+                                    style="color:#ffffff;text-transform:uppercase;">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <style>
+                @media screen and (max-width: 980px) {
+                    #rec268055891 .t456__leftcontainer {
+                        padding: 20px;
+                    }
+                }
+
+                @media screen and (max-width: 980px) {
+                    #rec268055891 .t456__imglogo {
+                        padding: 20px 0;
+                    }
+                }
+            </style>
+            <script type="text/javascript">t_onReady(function () {
+                    t_onFuncLoad('t456_setListMagin', function () {
+                        t456_setListMagin('268055891', '1');
+                    });
+                });
+                t_onReady(function () {
+                    t_onFuncLoad('t_menu__highlightActiveLinks', function () {
+                        t_menu__highlightActiveLinks('.t456__list_item a');
+                    });
+                    t_onFuncLoad('t_menu__findAnchorLinks', function () {
+                        t_menu__findAnchorLinks('268055891', '.t456__list_item a');
+                    });
+                });
+                window.addEventListener('resize', function () {
+                    t_onFuncLoad('t_menu__setBGcolor', function () {
+                        t_menu__setBGcolor('268055891', '.t456');
+                    });
+                });
+                t_onReady(function () {
+                    t_onFuncLoad('t_menu__setBGcolor', function () {
+                        t_menu__setBGcolor('268055891', '.t456');
+                    });
+                });
+                t_onReady(function () {
+                    t_onFuncLoad('t_menu__changeBgOpacity', function () {
+                        t_menu__changeBgOpacity('268055891', '.t456');
+                        window.addEventListener('scroll', t_throttle(function () {
+                            t_menu__changeBgOpacity('268055891', '.t456');
+                        }));
+                    });
+                });</script>
+            <style>
+                #rec268055891 .t-menu__link-item {
+                    -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    outline: none;
+                }
+
+                /* #rec268055891 .t-menu__link-item:not(:focus-visible){
+    outline: none;
+    } */
+                #rec268055891 .t-menu__link-item:not(.t-active):not(.tooltipstered):hover {
+                    opacity: 0.6 !important;
+                }
+
+                @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+
+                    #rec268055891 .t-menu__link-item,
+                    #rec268055891 .t-menu__link-item.t-active {
+                        opacity: 1 !important;
+                    }
+                }
+            </style><!--[if IE 8]><style>#rec268055891 .t456 {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9366a53', endColorstr='#D9366a53');
+    }</style><![endif]-->
+        </div>
+        <div id="rec270027341" class="r t-rec t-screenmax-980px" style=" " data-animationappear="off"
+            data-record-type="309" data-screen-max="980px"><!-- T280 -->
+            <div id="nav270027341marker"></div>
+            <div id="nav270027341" class="t280 " data-menu="yes" data-appearoffset="">
+                <div class="t280__container " style="">
+                    <div class="t280__container__bg" style=" " data-bgcolor-hex="" data-bgcolor-rgba=""
+                        data-navmarker="nav270027341marker" data-appearoffset="" data-bgopacity="1"
+                        data-menu-shadow="0px 1px 3px rgba(0,0,0,0.)"></div>
+                    <div class="t280__menu__content ">
+                        <div class="t280__logo__container" style="">
+                            <div class="t280__logo__content"><a class="t280__logo" href="http://sharingmap.ru/"
+                                    style="color:#ffffff;"><img class="t280__logo__img"
+                                        src="https://static.tildacdn.com/tild3165-3033-4063-b439-613931353036/Union_5.svg"
+                                        imgfield="img" style="height: 50px;" alt="Company"></a></div>
+                        </div>
+                        <div class="t280__burger"><span style="background-color:#99ca57;"></span><span
+                                style="background-color:#99ca57;"></span><span
+                                style="background-color:#99ca57;"></span><span style="background-color:#99ca57;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t280__menu__wrapper t280__menu__wrapper_2">
+                    <div class="t280__menu__bg" style="background-color:#99ca57; "></div>
+                    <div class="t280__menu__container">
+                        <nav class="t280__menu t-width t-width_6" aria-label="Основные разделы на странице">
+                            <ul class="t280__list" role="menubar" aria-label="Основные разделы на странице">
+                                <li class="t280__menu__item" role="none"> <a
+                                        class="t280__menu__link t-title t-title_xl t-menu__link-item" href="#how"
+                                        role="menuitem" tabindex="0" data-menu-submenu-hook=""
+                                        style="color:#ffffff;text-transform:uppercase;">Как пользоваться?</a></li>
+                                <li class="t280__menu__item" role="none"> <a
+                                        class="t280__menu__link t-title t-title_xl t-menu__link-item" href="#we"
+                                        role="menuitem" tabindex="0" data-menu-submenu-hook=""
+                                        style="color:#ffffff;text-transform:uppercase;">Кто мы?</a></li>
+                                <li class="t280__menu__item" role="none"> <a
+                                        class="t280__menu__link t-title t-title_xl t-menu__link-item" href="#contacts"
+                                        role="menuitem" tabindex="0" data-menu-submenu-hook=""
+                                        style="color:#ffffff;text-transform:uppercase;">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="t280__bottom t-width t-width_6">
+                            <div class="t280__descr t280__bottom__item t-descr t-descr_xs"
+                                style="color:#000000;font-weight:400;">Help Center</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @media screen and (max-width: 980px) {
+                    #rec270027341 .t280__main_opened .t280__menu__content {
+                        background-color: #99ca57 !important;
+                        opacity: 1 !important;
+                    }
+                }
+            </style>
+            <script>t_onReady(function () {
+                    t_onFuncLoad('t280_showMenu', function () {
+                        t280_showMenu('270027341');
+                    });
+                    t_onFuncLoad('t280_changeSize', function () {
+                        t280_changeSize('270027341');
+                    });
+                    t_onFuncLoad('t280_highlight', function () {
+                        t280_highlight();
+                    });
+                });
+                t_onFuncLoad('t280_changeSize', function () {
+                    window.addEventListener('resize', t_throttle(function () {
+                        t280_changeSize('270027341');
+                    }));
+                });</script>
+            <style>
+                #rec270027341 .t-menu__link-item {
+                    -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    outline: none;
+                }
+
+                /* #rec270027341 .t-menu__link-item:not(:focus-visible){
+    outline: none;
+    } */
+                #rec270027341 .t-menu__link-item:not(.t-active):not(.tooltipstered):hover {
+                    opacity: 0.6 !important;
+                }
+
+                @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+
+                    #rec270027341 .t-menu__link-item,
+                    #rec270027341 .t-menu__link-item.t-active {
+                        opacity: 1 !important;
+                    }
+                }
+            </style>
+        </div>
+        <div id="rec268180560" class="r t-rec" style=" " data-record-type="215"><a name="about"
+                style="font-size:0;"></a></div>
+        <div id="rec268035350" class="r t-rec" style=" " data-animationappear="off" data-record-type="396"><!-- T396 -->
+            <style>
+                #rec268035350 .t396__artboard {
+                    min-height: 700px;
+                    height: 100vh;
+                    background-color: #366a53;
+                    overflow: visible;
+                }
+
+                #rec268035350 .t396__filter {
+                    min-height: 700px;
+                    height: 100vh;
+                }
+
+                #rec268035350 .t396__carrier {
+                    min-height: 700px;
+                    height: 100vh;
+                    background-position: center center;
+                    background-attachment: scroll;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .t396__artboard {}
+
+                    #rec268035350 .t396__filter {}
+
+                    #rec268035350 .t396__carrier {
+                        background-attachment: scroll;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {}
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .t396__artboard {
+                        min-height: 910px;
+                    }
+
+                    #rec268035350 .t396__filter {
+                        min-height: 910px;
+                    }
+
+                    #rec268035350 .t396__carrier {
+                        min-height: 910px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .t396__artboard {
+                        min-height: 1090px;
+                    }
+
+                    #rec268035350 .t396__filter {
+                        min-height: 1090px;
+                    }
+
+                    #rec268035350 .t396__carrier {
+                        min-height: 1090px;
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1470233923389"] {
+                    color: #ffffff;
+                    z-index: 7;
+                    top: calc(50vh - 350px + 390px);
+                    left: calc(50% - 600px + 22px);
+                    width: 660px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                    color: #ffffff;
+                    font-size: 28px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.15;
+                    font-weight: 400;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] {
+                        top: calc(50vh - 350px + 360px);
+                        left: calc(50% - 480px + 11px);
+                        width: 500px;
+                    }
+
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] {
+                        top: calc(50vh - 350px + 272px);
+                        left: calc(50% - 320px + 10px);
+                        width: 310px;
+                    }
+
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] {
+                        top: calc(50vh - 455px + 265px);
+                        left: calc(50% - 240px + 10px);
+                        width: 460px;
+                    }
+
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 22px;
+                        line-height: 1.45;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] {
+                        top: calc(238px);
+                        left: calc(50% - 160px + 10px);
+                        width: 290px;
+                    }
+
+                    #rec268035350 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 22px;
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1470210224069"] {
+                    z-index: 6;
+                    top: calc(50vh - 292px + -14px);
+                    left: calc(50% + 600px - 275px + -46px);
+                    width: 275px;
+                    height: 584px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1470210224069"] .tn-atom {
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {}
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470210224069"] {
+                        top: calc(50vh - 213.5px + -14px);
+                        left: calc(50% + 320px - 203px + -49px);
+                        width: 203px;
+                        height: 427px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470210224069"] {
+                        top: calc(50vh - 213.5px + 108px);
+                        left: calc(50% + 240px - 203px + -138px);
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1470210224069"] {
+                        top: calc(545vh - 213.5px + 60px);
+                        left: calc(50% + 160px - 203px + -58px);
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610188178490"] {
+                    z-index: 8;
+                    top: calc(50vh - 350px + 74px);
+                    left: calc(50% - 600px + 2px);
+                    width: 709px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610188178490"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188178490"] {
+                        top: calc(50vh - 350px + 114px);
+                        left: calc(50% - 480px + -5px);
+                        width: 589px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188178490"] {
+                        top: calc(50vh - 350px + 125px);
+                        left: calc(50% - 320px + 0px);
+                        width: 379px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188178490"] {
+                        top: calc(50vh - 455px + 80px);
+                        left: calc(50% - 240px + -1px);
+                        width: 489px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188178490"] {
+                        top: calc(108px);
+                        left: calc(50% - 160px + 2px);
+                        width: 319px;
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610188249415"] {
+                    z-index: 1;
+                    top: 0px;
+                    left: calc(100% - 733px + 0px);
+                    width: 733px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610188249415"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188249415"] {
+                        top: 0px;
+                        left: calc(100% - 683px + 0px);
+                        width: 683px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188249415"] {
+                        top: 0px;
+                        left: calc(100% - 413px + 0px);
+                        width: 413px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188249415"] {
+                        top: 0px;
+                        left: calc(100% - 473px + -1px);
+                        width: 473px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610188249415"] {
+                        top: 0px;
+                        left: calc(100% - 553px + 23px);
+                        width: 553px;
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610567665172"] {
+                    z-index: 10;
+                    top: calc(50vh - 350px + 235px);
+                    left: calc(50% - 600px + 830px);
+                    width: 270px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610567665172"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567665172"] {
+                        top: calc(50vh - 350px + 260px);
+                        left: calc(50% - 480px + 610px);
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567665172"] {
+                        top: calc(50vh - 350px + 280px);
+                        left: calc(50% - 320px + 370px);
+                        width: 190px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567665172"] {
+                        top: calc(50vh - 455px + 496px);
+                        left: calc(50% - 240px + 90px);
+                        width: 200px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567665172"] {
+                        top: calc(526px);
+                        left: calc(50% - 160px + 29px);
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610567690726"] {
+                    z-index: 9;
+                    top: calc(50vh - 350px + 345px);
+                    left: calc(50% - 600px + 930px);
+                    width: 250px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1610567690726"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567690726"] {
+                        top: calc(50vh - 350px + 370px);
+                        left: calc(50% - 480px + 700px);
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567690726"] {
+                        top: calc(50vh - 350px + 360px);
+                        left: calc(50% - 320px + 450px);
+                        width: 160px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567690726"] {
+                        top: calc(50vh - 455px + 566px);
+                        left: calc(50% - 240px + 160px);
+                        width: 200px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1610567690726"] {
+                        top: calc(605px);
+                        left: calc(50% - 160px + 110px);
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1666472127300"] {
+                    z-index: 11;
+                    top: calc(50vh - 350px + 503px);
+                    left: calc(50% - 600px + 20px);
+                    width: 234px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1666472127300"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {}
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472127300"] {
+                        top: calc(50vh - 350px + 419px);
+                        left: calc(50% - 320px + 10px);
+                        width: 187px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472127300"] {
+                        top: calc(50vh - 455px + 818px);
+                        left: calc(50% - 240px + 40px);
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472127300"] {
+                        top: calc(851px);
+                        left: calc(50% - 160px + 22px);
+                        width: 276px;
+                    }
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1666472134905"] {
+                    z-index: 12;
+                    top: calc(50vh - 350px + 502px);
+                    left: calc(50% - 600px + 278px);
+                    width: 244px;
+                }
+
+                #rec268035350 .tn-elem[data-elem-id="1666472134905"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {}
+
+                @media screen and (max-width: 959px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472134905"] {
+                        top: calc(50vh - 350px + 490px);
+                        left: calc(50% - 320px + 10px);
+                        width: 195px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472134905"] {
+                        top: calc(50vh - 455px + 818px);
+                        left: calc(50% - 240px + 250px);
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec268035350 .tn-elem[data-elem-id="1666472134905"] {
+                        top: calc(950px);
+                        left: calc(50% - 160px + 16px);
+                        width: 288px;
+                    }
+                }
+            </style>
+            <div class='t396'>
+                <div class="t396__artboard" data-artboard-recid="268035350" data-artboard-height="700"
+                    data-artboard-height-res-480="910" data-artboard-height-res-320="1090" data-artboard-height_vh="100"
+                    data-artboard-valign="center" data-artboard-ovrflw="visible">
+                    <div class="t396__carrier" data-artboard-recid="268035350"></div>
+                    <div class="t396__filter" data-artboard-recid="268035350"></div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501470233923389' data-elem-id='1470233923389'
+                        data-elem-type='text' data-field-top-value="390" data-field-top-res-960-value="360"
+                        data-field-top-res-640-value="272" data-field-top-res-480-value="265"
+                        data-field-top-res-320-value="238" data-field-left-value="22" data-field-left-res-960-value="11"
+                        data-field-left-res-640-value="10" data-field-left-res-480-value="10"
+                        data-field-left-res-320-value="10" data-field-width-value="660"
+                        data-field-width-res-960-value="500" data-field-width-res-640-value="310"
+                        data-field-width-res-480-value="460" data-field-width-res-320-value="290"
+                        data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid"
+                        data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value=""
+                        data-field-widthunits-value="px" data-animate-sbs-event="intoview" data-animate-sbs-trg="1"
+                        data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'ti':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','ea':'','dt':'0'},{'ti':0,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'','dt':'0'},{'ti':500,'mx':'0','my':'0','sx':'1','sy':'1','op':0,'ro':'0','bl':'0','ea':'easeInOut','dt':'0'},{'ti':500,'mx':0,'my':-26,'sx':'1','sy':'1','op':1,'ro':'0','bl':'0','ea':'easeInOut','dt':'0'}]">
+                        <div class='tn-atom' field='tn_text_1470233923389'>Мобильное приложение, чтобы отдавать ненужные
+                            вещи в дар и находить нужные вещи бесплатно.</div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501470210224069' data-elem-id='1470210224069'
+                        data-elem-type='shape' data-field-top-value="-14" data-field-top-res-640-value="-14"
+                        data-field-top-res-480-value="108" data-field-top-res-320-value="60" data-field-left-value="-46"
+                        data-field-left-res-640-value="-49" data-field-left-res-480-value="-138"
+                        data-field-left-res-320-value="-58" data-field-height-value="584"
+                        data-field-height-res-640-value="427" data-field-width-value="275"
+                        data-field-width-res-640-value="203" data-field-axisy-value="center"
+                        data-field-axisx-value="right" data-field-container-value="grid" data-field-topunits-value="px"
+                        data-field-leftunits-value="px" data-field-heightunits-value="px"
+                        data-field-widthunits-value="px" data-animate-sbs-event="scroll" data-animate-sbs-trg="1"
+                        data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':0,'mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':540,'mx':0,'my':-300,'sx':'1','sy':'1','op':1,'ro':'0','bl':'0','fi':'','dd':'0'}]">
+                        <div class='tn-atom t-bgimg'
+                            data-original="https://static.tildacdn.com/tild3632-3433-4665-b332-326661376338/Group_16513.png"
+                            style="background-image:url('https://static.tildacdn.com/tild3632-3433-4665-b332-326661376338/-/resize/20x/Group_16513.png');">
+                        </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501610188178490' data-elem-id='1610188178490'
+                        data-elem-type='image' data-field-top-value="74" data-field-top-res-960-value="114"
+                        data-field-top-res-640-value="125" data-field-top-res-480-value="80"
+                        data-field-top-res-320-value="108" data-field-left-value="2" data-field-left-res-960-value="-5"
+                        data-field-left-res-640-value="0" data-field-left-res-480-value="-1"
+                        data-field-left-res-320-value="2" data-field-width-value="709"
+                        data-field-width-res-960-value="589" data-field-width-res-640-value="379"
+                        data-field-width-res-480-value="489" data-field-width-res-320-value="319"
+                        data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid"
+                        data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value=""
+                        data-field-widthunits-value="px" data-field-filewidth-value="652"
+                        data-field-fileheight-value="231">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild3964-6361-4431-a535-633261336638/Group_123_1.svg'
+                                imgfield='tn_img_1610188178490'> </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501610188249415' data-elem-id='1610188249415'
+                        data-elem-type='image' data-field-top-value="0" data-field-top-res-960-value="0"
+                        data-field-top-res-640-value="0" data-field-top-res-480-value="0"
+                        data-field-top-res-320-value="0" data-field-left-value="0" data-field-left-res-960-value="0"
+                        data-field-left-res-640-value="0" data-field-left-res-480-value="-1"
+                        data-field-left-res-320-value="23" data-field-width-value="733"
+                        data-field-width-res-960-value="683" data-field-width-res-640-value="413"
+                        data-field-width-res-480-value="473" data-field-width-res-320-value="553"
+                        data-field-axisy-value="top" data-field-axisx-value="right" data-field-container-value="window"
+                        data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value=""
+                        data-field-widthunits-value="px" data-field-filewidth-value="1003"
+                        data-field-fileheight-value="1148">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild6136-6161-4065-a464-333165393434/Ellipse_10.svg'
+                                imgfield='tn_img_1610188249415'> </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501610567665172' data-elem-id='1610567665172'
+                        data-elem-type='image' data-field-top-value="235" data-field-top-res-960-value="260"
+                        data-field-top-res-640-value="280" data-field-top-res-480-value="496"
+                        data-field-top-res-320-value="526" data-field-left-value="830"
+                        data-field-left-res-960-value="610" data-field-left-res-640-value="370"
+                        data-field-left-res-480-value="90" data-field-left-res-320-value="29"
+                        data-field-width-value="270" data-field-width-res-640-value="190"
+                        data-field-width-res-480-value="200" data-field-axisy-value="top" data-field-axisx-value="left"
+                        data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px"
+                        data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="scroll"
+                        data-animate-sbs-trg="1" data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':0,'mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':340,'mx':0,'my':-427,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-field-filewidth-value="357" data-field-fileheight-value="191">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild3166-6663-4437-b963-643262656536/Group_112.svg'
+                                imgfield='tn_img_1610567665172'> </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501610567690726' data-elem-id='1610567690726'
+                        data-elem-type='image' data-field-top-value="345" data-field-top-res-960-value="370"
+                        data-field-top-res-640-value="360" data-field-top-res-480-value="566"
+                        data-field-top-res-320-value="605" data-field-left-value="930"
+                        data-field-left-res-960-value="700" data-field-left-res-640-value="450"
+                        data-field-left-res-480-value="160" data-field-left-res-320-value="110"
+                        data-field-width-value="250" data-field-width-res-640-value="160"
+                        data-field-width-res-480-value="200" data-field-axisy-value="top" data-field-axisx-value="left"
+                        data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px"
+                        data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-sbs-event="scroll"
+                        data-animate-sbs-trg="1" data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':60,'mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':230,'mx':0,'my':-326,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-field-filewidth-value="346" data-field-fileheight-value="180">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild3865-3864-4336-b539-343235386261/Group_113.svg'
+                                imgfield='tn_img_1610567690726'> </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501666472127300' data-elem-id='1666472127300'
+                        data-elem-type='image' data-field-top-value="503" data-field-top-res-640-value="419"
+                        data-field-top-res-480-value="818" data-field-top-res-320-value="851" data-field-left-value="20"
+                        data-field-left-res-640-value="10" data-field-left-res-480-value="40"
+                        data-field-left-res-320-value="22" data-field-width-value="234"
+                        data-field-width-res-640-value="187" data-field-width-res-320-value="276"
+                        data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid"
+                        data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value=""
+                        data-field-widthunits-value="px" data-field-filewidth-value="540"
+                        data-field-fileheight-value="156"> <a class='tn-atom'
+                            href="https://play.google.com/store/apps/details?id=com.SharingMap.android" target="_blank">
+                            <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild6431-6538-4932-b036-663135633364/Google_Play_1.svg'
+                                imgfield='tn_img_1666472127300'> </a> </div>
+                    <div class='t396__elem tn-elem tn-elem__2680353501666472134905' data-elem-id='1666472134905'
+                        data-elem-type='image' data-field-top-value="502" data-field-top-res-640-value="490"
+                        data-field-top-res-480-value="818" data-field-top-res-320-value="950"
+                        data-field-left-value="278" data-field-left-res-640-value="10"
+                        data-field-left-res-480-value="250" data-field-left-res-320-value="16"
+                        data-field-width-value="244" data-field-width-res-640-value="195"
+                        data-field-width-res-320-value="288" data-field-axisy-value="top" data-field-axisx-value="left"
+                        data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px"
+                        data-field-heightunits-value="" data-field-widthunits-value="px"
+                        data-field-filewidth-value="540" data-field-fileheight-value="156"> <a class='tn-atom'
+                            href="https://apps.apple.com/gb/app/sharing-map/id1634004078" target="_blank"> <img
+                                class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild6433-3033-4335-b465-323931613533/App_Store_1.svg'
+                                imgfield='tn_img_1666472134905'> </a> </div>
+                </div>
+            </div>
+            <script>t_onReady(function () {
+                    t_onFuncLoad('t396_init', function () {
+                        t396_init('268035350');
+                    });
+                });</script><!-- /T396 -->
+        </div>
+        <div id="rec268060704" class="r t-rec" style=" " data-animationappear="off" data-record-type="396"><!-- T396 -->
+            <style>
+                #rec268060704 .t396__artboard {
+                    height: 520px;
+                    background-color: #366a53;
+                    overflow: visible;
+                }
+
+                #rec268060704 .t396__filter {
+                    height: 520px;
+                }
+
+                #rec268060704 .t396__carrier {
+                    height: 520px;
+                    background-position: center center;
+                    background-attachment: scroll;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec268060704 .t396__artboard {}
+
+                    #rec268060704 .t396__filter {}
+
+                    #rec268060704 .t396__carrier {
+                        background-attachment: scroll;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {}
+
+                @media screen and (max-width: 639px) {}
+
+                @media screen and (max-width: 479px) {
+                    #rec268060704 .t396__artboard {
+                        height: 470px;
+                    }
+
+                    #rec268060704 .t396__filter {
+                        height: 470px;
+                    }
+
+                    #rec268060704 .t396__carrier {
+                        height: 470px;
+                    }
+                }
+
+                #rec268060704 .tn-elem[data-elem-id="1610194594752"] {
+                    z-index: 8;
+                    top: -860px;
+                    left: calc(50% - 600px + -1610px);
+                    width: 1636px;
+                }
+
+                #rec268060704 .tn-elem[data-elem-id="1610194594752"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {}
+
+                @media screen and (max-width: 959px) {}
+
+                @media screen and (max-width: 639px) {}
+
+                @media screen and (max-width: 479px) {}
+
+                #rec268060704 .tn-elem[data-elem-id="1610559248777"] {
+                    z-index: 10;
+                    top: -795px;
+                    left: calc(50% - 600px + 1240px);
+                    width: 1146px;
+                }
+
+                #rec268060704 .tn-elem[data-elem-id="1610559248777"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {}
+
+                @media screen and (max-width: 959px) {}
+
+                @media screen and (max-width: 639px) {}
+
+                @media screen and (max-width: 479px) {
+                    #rec268060704 .tn-elem[data-elem-id="1610559248777"] {
+                        top: -825px;
+                        left: calc(50% - 160px + 1091px);
+                    }
+                }
+            </style>
+            <div class='t396'>
+                <div class="t396__artboard" data-artboard-recid="268060704" data-artboard-height="520"
+                    data-artboard-height-res-320="470" data-artboard-height_vh="" data-artboard-valign="center"
+                    data-artboard-ovrflw="visible">
+                    <div class="t396__carrier" data-artboard-recid="268060704"></div>
+                    <div class="t396__filter" data-artboard-recid="268060704"></div>
+                    <div class='t396__elem tn-elem tn-elem__2680607041610194594752' data-elem-id='1610194594752'
+                        data-elem-type='image' data-field-top-value="-860" data-field-left-value="-1610"
+                        data-field-width-value="1636" data-field-axisy-value="top" data-field-axisx-value="left"
+                        data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px"
+                        data-field-heightunits-value="" data-field-widthunits-value="px" data-animate-mobile="y"
+                        data-animate-sbs-event="scroll" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':1287,'my':276,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-960="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':1171,'my':268,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-640="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':1024,'my':256,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-480="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':927,'my':245,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-320="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':892,'my':255,'sx':0.35,'sy':0.35,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-field-filewidth-value="1680" data-field-fileheight-value="1680">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild6561-3030-4434-a637-633939306662/___-_2021-01-13T2000.png'
+                                imgfield='tn_img_1610194594752'> </div>
+                    </div>
+                    <div class='t396__elem tn-elem tn-elem__2680607041610559248777' data-elem-id='1610559248777'
+                        data-elem-type='image' data-field-top-value="-795" data-field-top-res-320-value="-825"
+                        data-field-left-value="1240" data-field-left-res-320-value="1091" data-field-width-value="1146"
+                        data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid"
+                        data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value=""
+                        data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="scroll"
+                        data-animate-sbs-trg="1" data-animate-sbs-trgofst="0"
+                        data-animate-sbs-opts="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':-1184,'my':179,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-960="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':-1291,'my':169,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-640="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':-1460,'my':170,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-480="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':-1542,'my':161,'sx':0.5,'sy':0.5,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-animate-sbs-opts-res-320="[{'di':'0','mx':'0','my':'0','sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':100,'mx':0,'my':0,'sx':'1','sy':'1','op':'1','ro':'0','bl':'0','fi':'','dd':'0'},{'di':450,'mx':-1486,'my':202,'sx':0.35,'sy':0.35,'op':'1','ro':'0','bl':'0','fi':'','dd':'0'}]"
+                        data-field-filewidth-value="1394" data-field-fileheight-value="2048">
+                        <div class='tn-atom'> <img class='tn-atom__img t-img'
+                                data-original='https://static.tildacdn.com/tild6537-3262-4134-a663-653332646638/Group_122.svg'
+                                imgfield='tn_img_1610559248777'> </div>
+                    </div>
+                </div>
+            </div>
+            <script>t_onReady(function () {
+                    t_onFuncLoad('t396_init', function () {
+                        t396_init('268060704');
+                    });
+                });</script><!-- /T396 -->
+        </div>
+        <div id="rec489970324" class="r t-rec t-rec_pt_0" style="padding-top:0px; " data-animationappear="off"
+            data-record-type="396"><!-- T396 -->
+            <style>
+                #rec489970324 .t396__artboard {
+                    height: 620px;
+                    background-color: #366a53;
+                    overflow: visible;
+                }
+
+                #rec489970324 .t396__filter {
+                    height: 620px;
+                }
+
+                #rec489970324 .t396__carrier {
+                    height: 620px;
+                    background-position: center center;
+                    background-attachment: scroll;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .t396__artboard {}
+
+                    #rec489970324 .t396__filter {}
+
+                    #rec489970324 .t396__carrier {
+                        background-attachment: scroll;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {}
+
+                @media screen and (max-width: 639px) {}
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .t396__artboard {
+                        height: 840px;
+                    }
+
+                    #rec489970324 .t396__filter {
+                        height: 840px;
+                    }
+
+                    #rec489970324 .t396__carrier {
+                        height: 840px;
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1470233923389"] {
+                    color: #ffffff;
+                    z-index: 8;
+                    top: 64px;
+                    left: calc(50% - 600px + 20px);
+                    width: 1110px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                    color: #ffffff;
+                    font-size: 28px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] {
+                        top: 86px;
+                        left: calc(50% - 480px + 9px);
+                        width: 940px;
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] {
+                        top: 23px;
+                        left: calc(50% - 320px + 10px);
+                        width: 630px;
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] {
+                        top: 43px;
+                        left: calc(50% - 240px + 10px);
+                        width: 460px;
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] .tn-atom {
+                        font-size: 22px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1470233923389"] {
+                        top: 30px;
+                        left: calc(50% - 160px + 10px);
+                        width: 310px;
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610216584518"] {
+                    color: #99ca57;
+                    z-index: 9;
+                    top: 391px;
+                    left: calc(50% - 600px + 20px);
+                    width: 400px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610216584518"] .tn-atom {
+                    color: #99ca57;
+                    font-size: 28px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] {
+                        top: 379px;
+                        left: calc(50% - 480px + 10px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] {
+                        top: 318px;
+                        left: calc(50% - 320px + 231px);
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] {
+                        top: 332px;
+                        left: calc(50% - 240px + 150px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] .tn-atom {
+                        font-size: 22px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216584518"] {
+                        top: 521px;
+                        left: calc(50% - 160px + 10px);
+                        width: 300px;
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610216593641"] {
+                    color: #99ca57;
+                    z-index: 11;
+                    top: 391px;
+                    left: calc(50% - 600px + 781px);
+                    width: 330px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610216593641"] .tn-atom {
+                    color: #99ca57;
+                    font-size: 28px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] {
+                        top: 379px;
+                        left: calc(50% - 480px + 605px);
+                        width: 290px;
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] .tn-atom {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] {
+                        top: 484px;
+                        left: calc(50% - 320px + 231px);
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] {
+                        top: 495px;
+                        left: calc(50% - 240px + 150px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] .tn-atom {
+                        font-size: 22px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610216593641"] {
+                        top: 670px;
+                        left: calc(50% - 160px + 10px);
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610218290655"] {
+                    z-index: 12;
+                    top: 319px;
+                    left: calc(50% - 600px + 520px);
+                    width: 161px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610218290655"] .tn-atom {
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610218290655"] {
+                        top: 322px;
+                        left: calc(50% - 480px + 389px);
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610218290655"] {
+                        top: 265px;
+                        left: calc(50% - 320px + 10px);
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610218290655"] {
+                        top: 290px;
+                        left: calc(50% - 240px + 10px);
+                        width: 121px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610218290655"] {
+                        top: 344px;
+                        left: calc(50% - 160px + 100px);
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610362398015"] {
+                    color: #99ca57;
+                    z-index: 13;
+                    top: 291px;
+                    left: calc(50% - 600px + 17px);
+                    width: 360px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610362398015"] .tn-atom {
+                    color: #99ca57;
+                    font-size: 68px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] {
+                        top: 303px;
+                        left: calc(50% - 480px + 7px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] .tn-atom {
+                        font-size: 54px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] {
+                        top: 242px;
+                        left: calc(50% - 320px + 228px);
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] {
+                        top: 269px;
+                        left: calc(50% - 240px + 147px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] .tn-atom {
+                        font-size: 48px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] {
+                        top: 469px;
+                        left: calc(50% - 160px + 7px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362398015"] .tn-atom {
+                        font-size: 36px;
+                    }
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610362430764"] {
+                    color: #99ca57;
+                    z-index: 14;
+                    top: 291px;
+                    left: calc(50% - 600px + 777px);
+                    width: 330px;
+                }
+
+                #rec489970324 .tn-elem[data-elem-id="1610362430764"] .tn-atom {
+                    color: #99ca57;
+                    font-size: 68px;
+                    font-family: 'FuturaPT', Arial, sans-serif;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    background-position: center center;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] {
+                        top: 303px;
+                        left: calc(50% - 480px + 603px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] .tn-atom {
+                        font-size: 54px;
+                    }
+                }
+
+                @media screen and (max-width: 959px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] {
+                        top: 408px;
+                        left: calc(50% - 320px + 229px);
+                    }
+                }
+
+                @media screen and (max-width: 639px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] {
+                        top: 432px;
+                        left: calc(50% - 240px + 148px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] .tn-atom {
+                        font-size: 48px;
+                    }
+                }
+
+                @media screen and (max-width: 479px) {
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] {
+                        top: 615px;
+                        left: calc(50% - 160px + 8px);
+                    }
+
+                    #rec489970324 .tn-elem[data-elem-id="1610362430764"] .tn-atom {
+                        font-size: 36px;
+                    }
+                }
+            </style>
+ 
+
+    <script type="text/javascript"
+        data-tilda-cookie-type="analytics"> setTimeout(function () { (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); window.mainMetrikaId = 56950243; ym(window.mainMetrikaId, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, ecommerce: "dataLayer" }); }, 2000);</script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/56950243" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">if (!window.mainTracker) { window.mainTracker = 'tilda'; }
+        setTimeout(function () {
+            (function (d, w, k, o, g) { var n = d.getElementsByTagName(o)[0], s = d.createElement(o), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src = g; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, '92fcdcb6237698deca7301d4863baff6', 'script', 'https://static.tildacdn.com/js/tilda-stat-1.0.min.js');
+        }, 2000);</script>
+
+        
+
+
+        <script src="js/core.js"></script>
+</body>
+
+</html>
