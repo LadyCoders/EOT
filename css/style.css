@@ -1,3 +1,4 @@
+
 * {
   margin: 0 auto;
 }
@@ -190,13 +191,12 @@ section {
   opacity: 0;
   height: 0;
   overflow: hidden;
-  transition: opacity .3s
+  transition:.4s;
 }
 
 .accordion-body.active {
   height: 100%;
   opacity: 1;
-
   padding: 5px;
 }
 
@@ -207,30 +207,30 @@ section {
 
 .accordion:has(.active) .arrow {
   transform: rotate(180deg);
+  transition: .5s;
 }
 
 
 .questions-tit {
   text-align: center;
   margin-bottom: 30px;
-  font-family: 'Manrope';
+  font-family: 'Lobster';
   font-size: 50px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 55px;
   color:#5e7e33;
 }
 
 .accordion-header span{
-  font-family: 'Manrope';
+  font-family: 'Cormorant Infant';
   font-size: 23px;
   font-weight: 400px;
 }
 
 .accordion-body p{
-  font-family: 'Manrope';
+  font-family: 'Cormorant Infant';
   font-size: 18px ;
   font-weight: 400;
-  padding:0 40px;
 }
 
 svg{

@@ -14,3 +14,4 @@ accordions.forEach((accordion) => {
     body.classList.toggle('active')
   })
 })
+
