@@ -1,19 +1,24 @@
-const accordions = document.querySelectorAll('.accordion')
+const accordions = document.querySelectorAll('.accordion');
 
 accordions.forEach((accordion) => {
   accordion.addEventListener('click', () => {
-    // Закрываем все аккордионы перед открытием текущего
-    accordions.forEach((otherAccordion) => {
-      if (otherAccordion !== accordion) {
-        otherAccordion.querySelector('.accordion-body').classList.remove('active')
-      }
-    })
+    const isActive = accordion.querySelector('.accordion-body').classList.contains('active');
+
+    // Закрываем все аккордионы, если текущий аккордион не активен
+    if (!isActive) {
+      accordions.forEach((otherAccordion) => {
+        if (otherAccordion !== accordion) {
+          otherAccordion.querySelector('.accordion-body').classList.remove('active');
+        }
+      });
+    }
 
     // Открываем или закрываем текущий аккордион
-    const body = accordion.querySelector('.accordion-body')
-    body.classList.toggle('active')
-  })
-})
+    const body = accordion.querySelector('.accordion-body');
+    body.classList.toggle('active');
+  });
+});
+
 
 
 
@@ -124,6 +129,6 @@ function step(timestamp) {
 
 window.requestAnimationFrame(step);
 
-import { Ripple, initMDB } from "mdb-ui-kit";
+// import { Ripple, initMDB } from "mdb-ui-kit";
 
 initMDB({ Ripple });
