@@ -451,6 +451,7 @@ mix-blend-mode: multiply;
 }
 /*veshalka*/
 .btn-up {
+  z-index: 100;
 	/* фиксированное позиционирование */
 	position: fixed;
 	/* цвет фона */
