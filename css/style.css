@@ -449,3 +449,49 @@ mix-blend-mode: multiply;
     background-positon-x: 0px;
   }
 }
+/*veshalka*/
+.btn-up {
+	/* фиксированное позиционирование */
+	position: fixed;
+	/* цвет фона */
+	background-color: rgb(0 203 57);
+	/* расстояние от правого края окна браузера */
+	right: 20px;
+	/* расстояние от нижнего края окна браузера */
+	bottom: 0;
+	/* скругление верхнего левого угла */
+	border-top-left-radius: 8px;
+	/* скругление верхнего правого угла */
+	border-top-right-radius: 8px;
+	/* вид курсора */
+	cursor: pointer;
+	/* отображение элемента как flex */
+	display: flex;
+	/* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+	align-items: center;
+	/* выравниваем элементы внутри элемента по центру вдоль главной оси */
+	justify-content: center;
+	/* ширина элемента */
+	width: 60px;
+	/* высота элемента */
+	height: 50px;
+  }
+  
+  .btn-up::before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	background: transparent no-repeat center center;
+	background-size: 100% 100%;
+	background-image: url(../img/veshalka-up.svg);
+  }
+  
+  .btn-up_hide {
+	display: none;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+	.btn-up:hover {
+	  background-color: #512da8; /* цвет заднего фона при наведении */
+	}
+  }
