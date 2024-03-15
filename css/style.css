@@ -598,6 +598,7 @@ mix-blend-mode: multiply;
 
 .znak {
   align-items: center;
+  margin-top: 14px;
   display: flex;
 }
 
@@ -900,3 +901,43 @@ ul {
 	  background-color: #512da8; /* цвет заднего фона при наведении */
 	}
   }
+  .header__wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 20px;
+    }
+    
+    .hamb {
+    display: none;
+    }
+    
+    .popup {
+    display: none;
+    }
+  
+    .menu > li > a {
+    text-decoration: none;
+    margin-top: -10px;
+    
+    }
+    .header__wrap .menu {
+    display: flex;
+    margin-right: 800px;
+    }
+    
+    .header__wrap .menu > li {
+    display: flex;
+    align-items: stretch;
+    }
+    
+    .header__wrap .menu > li > a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .header__wrap .menu > li > a:hover {
+    color: rgba(255, 255, 255, 1);
+    }
