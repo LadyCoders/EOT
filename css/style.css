@@ -382,6 +382,7 @@ mix-blend-mode: multiply;
 
 .znak {
   align-items: center;
+  margin-top: 14px;
   display: flex;
 }
 
