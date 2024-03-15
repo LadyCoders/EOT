@@ -552,6 +552,109 @@ mix-blend-mode: multiply;
 }
 
 
+@property --p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+
+.progress{
+  height: auto;
+}
+.sie {
+  --p: 90;
+  --b: 22px;
+  --c: rgb(29, 20, 20);
+  --w: 150px;
+
+  width: 148px;
+  height: 148px;
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.sie:before,
+.sie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.skill {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.znak {
+  align-items: center;
+  display: flex;
+}
+
+.first-per {
+  margin-bottom: 20px;
+}
+
+.years {
+  /* small/regular */
+  color: rgb(66, 69, 81);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.sec_per {
+  margin-bottom: 20px;
+}
+
+.sie:before {
+  inset: 0;
+  background:
+    radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+
+.pie:after {
+  inset: calc(50% - var(--b)/2);
+  background: var(--c);
+  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+  display: flex;
+  align-items: center;
+  animation: p 1s .5s both;
+}
+
+.no-round:before {
+  background-size: 0 0, auto;
+}
+
+.no-round:after {
+  content: none;
+}
+
+@keyframes p {
+  from {
+    --p: 0
+  }
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
