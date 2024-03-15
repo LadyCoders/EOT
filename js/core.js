@@ -1,23 +1,82 @@
-const accordions = document.querySelectorAll('.accordion');
+// const accordions = document.querySelectorAll('.accordion');
 
-accordions.forEach((accordion) => {
-  accordion.addEventListener('click', () => {
-    const isActive = accordion.querySelector('.accordion-body').classList.contains('active');
+// accordions.forEach((accordion) => {
+//   accordion.addEventListener('click', (el) => {
+//     const isActive = accordion.querySelector('.accordion-body').classList.contains('active');
 
-    // Закрываем все аккордионы, если текущий аккордион не активен
-    if (!isActive) {
-      accordions.forEach((otherAccordion) => {
-        if (otherAccordion !== accordion) {
-          otherAccordion.querySelector('.accordion-body').classList.remove('active');
-        }
-      });
+//     // Закрываем все аккордионы, если текущий аккордион не активен
+//     if (!isActive) {
+//       accordions.forEach((otherAccordion) => {
+//         if (otherAccordion !== accordion) {
+//           otherAccordion.querySelector('.accordion-body').classList.remove('active');
+//         }
+//       });
+//     }
+
+//     // Открываем или закрываем текущий аккордион
+//     const body = accordion.querySelector('.accordion-body');
+//     body.classList.toggle('active');
+
+//   });
+// });
+
+var accordeonButtons = document.getElementsByClassName("accordeon__button");
+
+//пишем событие при клике на кнопки - вызов функции toggle
+for(var i = 0; i < accordeonButtons.length; i++) {
+    var accordeonButton = accordeonButtons[i];
+
+    accordeonButton.addEventListener("click", toggleItems, false);
+}
+
+//пишем функцию
+function toggleItems() {
+
+    // переменная кнопки(актульная) с классом
+    var itemClass = this.className;
+
+    // добавляем всем кнопкам класс close
+    for(var i = 0; i < accordeonButtons.length; i++) {
+        accordeonButtons[i].className = "accordeon__button closed";
     }
 
-    // Открываем или закрываем текущий аккордион
-    const body = accordion.querySelector('.accordion-body');
-    body.classList.toggle('active');
-  });
-});
+    // закрываем все открытые панели с текстом
+    var pannels = document.getElementsByClassName("accordeon__panel");
+    for (var z = 0; z < pannels.length; z++) {
+        pannels[z].style.maxHeight = 0;
+    }
+
+    // проверка. если кнопка имеет класс close при нажатии
+    // к актуальной(нажатой) кнопке добававляем активный класс
+    // а панели - которая находится рядом задаем высоту
+    if(itemClass == "accordeon__button closed") {
+        this.className = "accordeon__button active";
+        var panel = this.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+}
+
+// const accordionBtn = document.querySelectorAll('.accordion-header');
+// accordionBtn.forEach((btn) => {
+//   btn.addEventListener('click', function(el) {
+//     let accodrionBody = this.nextElementSibling
+//     const isActive = accodrionBody.classList.contains('active');
+//     if(!isActive){
+//       document.querySelector('.accordion-body.active').style.height = '0'
+//       document.querySelector('.accordion-body.active').classList.remove('active');
+
+//       accodrionBody.classList.add('active');
+//       accodrionBody.style.height = '100%'
+//       let accordionHeight = accodrionBody.clientHeight
+//       accodrionBody.style.height = 0
+//       accodrionBody.style.height = accordionHeight + 'px'
+//     } else{
+//       accodrionBody.classList.remove('active');
+//       accodrionBody.style.height = '0'
+//     }
+//   })
+// })
 
 
 //veshalka
@@ -162,7 +221,7 @@ window.requestAnimationFrame(step);
 
 // import { Ripple, initMDB } from "mdb-ui-kit";
 
-initMDB({ Ripple });
+// initMDB({ Ripple });
 
 
 
