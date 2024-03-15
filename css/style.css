@@ -369,7 +369,9 @@ header {
   border-style: solid;
 }
 
-
+.btn_eot {
+  width: 60px;
+}
 /* accordion */
 
 
